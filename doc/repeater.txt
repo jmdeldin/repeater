@@ -1,0 +1,45 @@
+*repeater.txt*  Repeats an item n times.
+
+Author:  Jon-Michael Deldin <dev@jmdeldin.com>
+Date:    2009-03-27
+Version: 1.0.0
+
+==============================================================================
+Contents                                                   *repeater-contents*
+==============================================================================
+
+1. Installation         |repeater-install|
+2. Commands             |repeater-commands|
+3. Usage                |repeater-usage|
+
+
+==============================================================================
+Installation                                                *repeater-install*
+==============================================================================
+
+1. Download repeater.zip and unzip to ".vim" or "vimfiles"
+2. :helptags ~/.vim/doc
+
+
+==============================================================================
+Commands                                                   *repeater-commands*
+==============================================================================
+
+:Repeater {item} [n]
+    Repeat {item} an optional {n} times. If {n} is omitted, the length of the
+    preceding line will be used.
+
+
+==============================================================================
+Usage                                                         *repeater-usage*
+==============================================================================
+
+1. Insert 78 equals signs:
+    :Repeater = 78
+2. Insert a ReST or Markdown section header for the current line:
+    :Repeater -
+3. Insert "THIS IS FILLER" 999 times:
+    :Repeater THIS\ IS\ FILLER.\  999
+
+vim:ft=help:norl:
+
