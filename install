@@ -1,0 +1,21 @@
+#!/bin/sh
+# copies or symlinks the README to ~/.vim/doc/repeater.txt and runs :helptags
+
+# symlink?
+symlink=true
+
+# doc dir
+dest=$HOME/.vim/doc/repeater.txt
+
+f=$(pwd)/README
+
+# symlink or copy README
+if $symlink; then
+    ln -si "$f" "${dest}"
+else
+    cp -i  "$f" "${dest}"
+fi
+
+# update helptags
+vim -c ':helptags ~/.vim/doc |q'
+
