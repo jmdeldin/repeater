@@ -1,6 +1,7 @@
 " File:     repeater.vim
 " Desc:     Repeats an item {n} times
 " Author:   Jon-Michael Deldin <dev@jmdeldin.com>
+" Homepage: http://github.com/jmdeldin/repeater
 
 function! s:Repeater(sep, ...)
     let sep = a:sep
