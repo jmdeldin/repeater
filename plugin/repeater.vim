@@ -16,7 +16,7 @@ function! s:Repeater(sep, ...)
     for i in range(ct)
         let out=out.sep
     endfor
-    exe 'norm! a'.out
+    exe 'norm! i'.out
 endfunction
 
 command -nargs=+ Repeater :call <SID>Repeater(<f-args>)
