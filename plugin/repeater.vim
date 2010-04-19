@@ -3,13 +3,16 @@
 " Author:   Jon-Michael Deldin <dev@jmdeldin.com>
 
 function! s:Repeater(sep, ...)
-    let sep=a:sep
+    let sep = a:sep
+    " if a separator and count is specified
     if a:0 == 1
-        let ct=a:1
+        let ct = a:1
+    " If a count is not specified, use the preceding line's length
     else
-        " If a count is not specified, use the preceding line's length
-        let ln=line('.')-1
-        let ct=col([ln,"$"])
+        " previous line #
+        let ln = line('.')-1
+        " # of columns
+        let ct = col([ln,"$"])-1
     endif
 
     let out=""
